@@ -10,10 +10,13 @@ RUN apt-get update \
         libssl-dev \
         liblzma-dev \
         liblzo2-dev \
+        mtd-utils \
         python3 \
         python3-dev \
         python3-pip \
         squashfs-tools \
+        unzip \
+        wget \
         zlib1g-dev \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
@@ -21,4 +24,5 @@ RUN apt-get update \
 # Install ubi_reader
 RUN pip3 install \
     ubi-reader==0.8.2 \
-    pwntools==4.8.0
+    pwntools==4.8.0 \
+    python-lzo==1.14
